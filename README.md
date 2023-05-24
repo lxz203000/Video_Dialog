@@ -1,4 +1,4 @@
-# video_dialog
+# Video Dialog
 
 The implementation of paper Dual Temporal Grounding-enhanced Video Dialog
 
@@ -13,7 +13,7 @@ If you want to additionally use audio features:
 * vggish.tgz
 * vggish_testset.tgz
 
-As for video features, please download the RGB frames from [Charades](https://prior.allenai.org/projects/charades) and use the pre-trained S3D model to extract features.
+As for video features, please download the RGB frames from [Charades](https://prior.allenai.org/projects/charades) and use the pre-trained [S3D](https://github.com/kylemin/S3D) model to extract features.
 
 ## Requirements
 * python==3.6.9
