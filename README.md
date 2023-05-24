@@ -29,6 +29,11 @@ pip install torch==1.7.1+cu92
 pip install git+https://github.com/Maluuba/nlg-eval.git@master
 ```
 
+## Pipeline
+Our model consists of two parts, i.e. grounding and dialog, which can be switched directly by changing `--task_type`.
+To complete the whole process, please first use the grounding part to get the timestamps corresponding to each QA and save it as a pickle file. 
+In the evaluation part of dialog, use `--grounding_results` to point to the pickle file to get the final results.
+
 ## Training
 The hyperparameters are displayed in main.py, if you want to use the default hyperparameters, you can run directly:
 ```
@@ -36,7 +41,9 @@ python -m torch.distributed.launch --nproc_per_node=2 --master_port 10000 main.p
 ```
 
 ## Evaluation
-
+```
+python -m torch.distributed.launch --nproc_per_node=1 --master_port 10000 main.py
+```
 
 
 
